@@ -1,10 +1,9 @@
 import turtle
 import colorsys
 
-# Setup
 screen = turtle.Screen()
 screen.bgcolor("black")
-screen.tracer(0)  # Turn off auto screen updates for speed
+screen.tracer(0)  
 
 t = turtle.Turtle()
 t.speed(5)
@@ -26,11 +25,9 @@ def draw_flower():
         hue += 0.01
         if hue > 1:
             hue = 0
-
-# Draw many layers
 for i in range(60):
     draw_flower()
     t.right(3)
-    screen.update()  # Manual screen update for performance
+    screen.update() 
 
 turtle.done()
